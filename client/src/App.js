@@ -10,8 +10,9 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import AlertState from './context/alert/AlertState';
 import Alerts from './components/layout/Alerts';
-import setAuthToken from './utils/setAuthToken';
 import PrivateRoute from './components/routing/PrivateRoute';
+import setAuthToken from './utils/setAuthToken';
+
 if (localStorage.token) {
   setAuthToken(localStorage.token);
 }

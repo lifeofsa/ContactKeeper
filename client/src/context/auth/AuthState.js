@@ -24,7 +24,7 @@ const AuthState = (props) => {
   };
   const [state, dispatch] = useReducer(AuthReducer, initState);
 
-  //   USER_LOADED
+  //   GET_USER_FROM_DATABASE
   const userLoaded = async () => {
     // @todo -next line
     if (localStorage.token) {
@@ -77,6 +77,7 @@ const AuthState = (props) => {
         type: LOGIN_SUCCESS,
         payload: res.data,
       });
+      userLoaded();
     } catch (error) {
       dispatch({
         type: LOGIN_FAIL,

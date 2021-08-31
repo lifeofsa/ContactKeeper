@@ -11,6 +11,7 @@ const Home = () => {
   const authContext = useContext(AuthContext);
   useEffect(() => {
     authContext.userLoaded();
+    // estlint-disable-next-line
   }, []);
   return (
     <div className='grid-2'>
