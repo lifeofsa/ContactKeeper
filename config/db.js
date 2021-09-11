@@ -1,22 +1,18 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-const config = require('config')
+const config = require('config');
 
-const db = config.get('mongoURI')
+const db = config.get('mongoURI');
 
-const connectDB = async () => {  
-    try {
-      await  mongoose.connect(db)
-        console.log("MongoDB Connected......")
-        
-    } catch (error) {
-        console.error(error.message)
-        process.exit(1)
-    }
-}
-
-
-
+const connectDB = async () => {
+  try {
+    await mongoose.connect(db);
+    console.log('MongoDB Connected......');
+  } catch (error) {
+    console.error(error.message);
+    process.exit(1);
+  }
+};
 
 // const connectDB =  () => {
 //     mongoose.connect(db).then(()=> console.log("MongoDB Connected"))
@@ -26,4 +22,4 @@ const connectDB = async () => {
 //         })
 // }
 
-module.exports = connectDB
+module.exports = connectDB;

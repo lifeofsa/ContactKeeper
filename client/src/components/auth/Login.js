@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import AlertContext from '../../context/alert/alertContext';
 import AuthContext from '../../context/auth/authContext';
+import helmet from 'react-helmet';
 const Login = (props) => {
   const authContext = useContext(AuthContext);
   const alertContext = useContext(AlertContext);
@@ -37,6 +38,8 @@ const Login = (props) => {
   };
   return (
     <div className='form-container'>
+      <style>{'body { background-image: url(./qq.JPG) }'}</style>
+
       <h1>
         Login <span className='text-primary'>Account</span>
       </h1>
